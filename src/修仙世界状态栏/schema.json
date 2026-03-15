@@ -1,0 +1,340 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "世界定位": {
+      "type": "object",
+      "properties": {
+        "当前大域": {
+          "type": "string"
+        },
+        "当前区域": {
+          "type": "string"
+        },
+        "当前场景": {
+          "type": "string"
+        },
+        "场景类型": {
+          "type": "string"
+        },
+        "当前事件": {
+          "type": "string"
+        },
+        "日期": {
+          "type": "string"
+        },
+        "天气": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "当前大域",
+        "当前区域",
+        "当前场景",
+        "场景类型",
+        "当前事件",
+        "日期",
+        "天气"
+      ]
+    },
+    "在场人物": {
+      "type": "object",
+      "propertyNames": {
+        "type": "string"
+      },
+      "additionalProperties": {
+        "$ref": "#/$defs/__schema0"
+      }
+    },
+    "用户信息": {
+      "type": "object",
+      "properties": {
+        "姓名": {
+          "type": "string"
+        },
+        "性别": {
+          "type": "string"
+        },
+        "年龄": {
+          "$ref": "#/$defs/__schema1"
+        },
+        "灵根": {
+          "type": "string"
+        },
+        "体质": {
+          "type": "string"
+        },
+        "称号": {
+          "type": "string"
+        },
+        "修真百艺": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "修为境界": {
+          "type": "string"
+        },
+        "修炼进度": {
+          "$ref": "#/$defs/__schema1"
+        },
+        "所属势力": {
+          "type": "string"
+        },
+        "当前状态": {
+          "type": "string"
+        },
+        "剑心境界": {
+          "type": "string"
+        },
+        "丹道境界": {
+          "type": "string"
+        },
+        "宗门贡献": {
+          "$ref": "#/$defs/__schema1"
+        },
+        "背包": {
+          "type": "object",
+          "properties": {
+            "灵石": {
+              "type": "object",
+              "properties": {
+                "下品": {
+                  "$ref": "#/$defs/__schema1"
+                },
+                "中品": {
+                  "$ref": "#/$defs/__schema1"
+                },
+                "上品": {
+                  "$ref": "#/$defs/__schema1"
+                }
+              },
+              "required": [
+                "下品",
+                "中品",
+                "上品"
+              ]
+            },
+            "丹药": {
+              "$ref": "#/$defs/__schema2"
+            },
+            "材料": {
+              "$ref": "#/$defs/__schema2"
+            },
+            "杂物": {
+              "$ref": "#/$defs/__schema2"
+            }
+          },
+          "required": [
+            "灵石",
+            "丹药",
+            "材料",
+            "杂物"
+          ]
+        },
+        "功法": {
+          "type": "object",
+          "properties": {
+            "主修功法": {
+              "type": "object",
+              "properties": {
+                "名称": {
+                  "type": "string"
+                },
+                "品阶": {
+                  "type": "string"
+                },
+                "总层数": {
+                  "$ref": "#/$defs/__schema1"
+                },
+                "当前层数": {
+                  "$ref": "#/$defs/__schema1"
+                },
+                "描述": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "名称",
+                "品阶",
+                "总层数",
+                "当前层数",
+                "描述"
+              ]
+            },
+            "辅修功法": {
+              "$ref": "#/$defs/__schema2"
+            },
+            "术法": {
+              "$ref": "#/$defs/__schema2"
+            }
+          },
+          "required": [
+            "主修功法",
+            "辅修功法",
+            "术法"
+          ]
+        },
+        "法宝": {
+          "type": "object",
+          "properties": {
+            "本命法宝": {
+              "$ref": "#/$defs/__schema3"
+            },
+            "防御法宝": {
+              "$ref": "#/$defs/__schema3"
+            },
+            "辅助法宝": {
+              "$ref": "#/$defs/__schema2"
+            },
+            "未装备法宝": {
+              "$ref": "#/$defs/__schema2"
+            }
+          },
+          "required": [
+            "本命法宝",
+            "防御法宝",
+            "辅助法宝",
+            "未装备法宝"
+          ]
+        },
+        "灵兽": {
+          "$ref": "#/$defs/__schema2"
+        }
+      },
+      "required": [
+        "姓名",
+        "性别",
+        "年龄",
+        "灵根",
+        "体质",
+        "称号",
+        "修真百艺",
+        "修为境界",
+        "修炼进度",
+        "所属势力",
+        "当前状态",
+        "剑心境界",
+        "丹道境界",
+        "宗门贡献",
+        "背包",
+        "功法",
+        "法宝",
+        "灵兽"
+      ]
+    },
+    "男性好感度": {
+      "type": "object",
+      "propertyNames": {
+        "type": "string"
+      },
+      "additionalProperties": {
+        "$ref": "#/$defs/__schema0"
+      }
+    },
+    "女性好感度": {
+      "type": "object",
+      "propertyNames": {
+        "type": "string"
+      },
+      "additionalProperties": {
+        "$ref": "#/$defs/__schema0"
+      }
+    },
+    "剧情标记": {
+      "type": "object",
+      "propertyNames": {
+        "type": "string"
+      },
+      "additionalProperties": {
+        "$ref": "#/$defs/__schema0"
+      }
+    }
+  },
+  "required": [
+    "世界定位",
+    "在场人物",
+    "用户信息",
+    "男性好感度",
+    "女性好感度",
+    "剧情标记"
+  ],
+  "$defs": {
+    "__schema0": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "number"
+        },
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "null"
+        },
+        {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/__schema0"
+          }
+        },
+        {
+          "type": "object",
+          "propertyNames": {
+            "type": "string"
+          },
+          "additionalProperties": {
+            "$ref": "#/$defs/__schema0"
+          }
+        }
+      ]
+    },
+    "__schema1": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "string"
+        },
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "__schema2": {
+      "type": "object",
+      "propertyNames": {
+        "type": "string"
+      },
+      "additionalProperties": {
+        "$ref": "#/$defs/__schema0"
+      }
+    },
+    "__schema3": {
+      "type": "object",
+      "properties": {
+        "名称": {
+          "type": "string"
+        },
+        "品阶": {
+          "type": "string"
+        },
+        "描述": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "名称",
+        "品阶",
+        "描述"
+      ]
+    }
+  }
+}
