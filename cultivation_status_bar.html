@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <style id="mvu-cultivation-panel-styles">
+    /* --- CSS Reset & Variables --- */
+    .mvu-cultivation-panel * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+    }
+  </style>
+
+  <script type="module">
+    // --- State and Config ---
+    const CONFIG = {
+      defaultLayout: 'fab', // fab | floating | inline
+      position: { x: 20, y: 100 },
+    };
+
+    let currentState = {
+      layout: CONFIG.defaultLayout,
+      data: null, // MVU data
+      dragInfo: { isDragging: false, startX: 0, startY: 0, originX: 0, originY: 0 }
+    };
+
+    // --- Core Logic ---
+    async function init() {
+      console.log('[Moon Phase Cultivation] Initializing...');
+      // To be implemented...
+    }
+
+    $(errorCatched(init));
+  </script>
+</head>
+<body>
+  <!-- Base Container -->
+  <div id="mvu-cultivation-app" class="mvu-cultivation-panel" data-layout="fab">
+    <!-- FAB Mode -->
+    <div class="mvu-cw-fab">
+    </div>
+
+    <!-- Floating / Inline Mode -->
+    <div class="mvu-cw-panel">
+    </div>
+
+    <!-- Modal Layer -->
+    <div class="mvu-cw-modal" style="display: none;">
+    </div>
+  </div>
+</body>
+</html>
